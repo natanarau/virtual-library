@@ -5,7 +5,7 @@ export const Container = styled.div`
   align-items: center;
   //justify-content: center;
   width : 31.250em;
-  min-width: 450px;
+  min-width: 600px;
   height: 17.375em;
   border-radius: 0.625em;
   box-shadow: 3px 3px 6px #9F352F75;
@@ -16,7 +16,7 @@ export const Container = styled.div`
       border-radius: 0.625em;
   }
   h1{
-    font: bold 20px Montserrat;
+    font: bold 15px Montserrat;
     margin-right: 2.500em;
   }
   h2{
