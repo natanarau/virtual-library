@@ -1,23 +1,27 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, InfoCol } from './styles';
 
-import { Container2 } from './styles';
 const BookCard = ({
     bookCover,
     title,
     description,
-    publishedDate
+    publishedDate,
+    infoLink
 }) => {
   return (
     <Container>
         <img src={bookCover}></img>
-          <Container2>
-          <h1>{title}</h1>
-          <p>Descriçaõ: {description}</p>
-          <h2>Publicado em: {publishedDate}</h2>
-          <button>Ver Mais</button>
-        </Container2>
+          <InfoCol>
+          <h1>{title.substring(0,60)}</h1>
+          {description && 
+            <p>Descriçaõ: {description.substring(0,80)}</p>
+          }
+          {publishedDate &&
+            <h2>Publicado em: {publishedDate}</h2>
+          }
+          <button onClick={() => {window.open(infoLink, "_blank")}} >Ver Mais</button>
+        </InfoCol>
     </Container>
   );
 };

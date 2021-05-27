@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  padding: 0 1vw;
+`;
+
+export const Column = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 5vh 2vw;
+  justify-content: center;
+  margin-top: 2.5vh; 
 `;
