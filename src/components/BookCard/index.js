@@ -13,9 +13,9 @@ const BookCard = ({
     <Container>
         <img src={bookCover}></img>
           <InfoCol>
-          <h1>{title.substring(0,60)}</h1>
+          <h1>{`${title.substring(0,60)} ${title.length > 60 ? '...' : ''}`}</h1>
           {description && 
-            <p>Descriçaõ: {description.substring(0,80)}</p>
+            <p>Descriçaõ: {`${description.substring(0,80)} ${description.length > 80 ? '...' : ''}`}</p>
           }
           {publishedDate &&
             <h2>Publicado em: {publishedDate}</h2>
