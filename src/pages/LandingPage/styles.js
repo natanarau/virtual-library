@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 0vh 1vw;
@@ -50,34 +50,36 @@ export const CustomForm = styled.form`
   align-items: center;
   justify-content: center;
   display: flex;
-`
+
+  input {
+    width: 12em;
+  }
+`;
 
 export const Header = styled.div`
-  p{
+  p {
     margin-top: 30px;
     text-align: center;
-    color:  #9F352F;
+    color: #9f352f;
     font: bold 30px Montserrat;
-
   }
-  form{
+  form {
     text-align: center;
-    font: Montserrat 10px normal
+    font: Montserrat 10px normal;
   }
-  button{
+  button {
     border-radius: 5px;
     margin-left: 5px;
     border: 1px solid #707070;
-    background: #9F352F;
+    background: #9f352f;
     color: white;
     font: bold 14px Montserrat;
     padding: 5px;
-
   }
 `;
 
 export const Column = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 2.5vh; 
+  margin-top: 2.5vh;
 `;
