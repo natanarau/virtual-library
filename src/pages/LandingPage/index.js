@@ -16,7 +16,7 @@ const LandingPage = () => {
     setCurrentPage(currentPage);
     const ENDPOINT = `volumes?q=${search}&maxResults=12&startIndex=${
       currentPage * 12
-    }&key=AIzaSyBtnIxwIJ0tIPwOnh1lzO-FZw54oBB6zRU`;
+    }`;
     api
       .get(ENDPOINT)
       .then((response) => {

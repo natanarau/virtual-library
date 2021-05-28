@@ -7,8 +7,6 @@ export const Container = styled.div`
     margin-top: 5vh;
     margin-bottom: 5vh;
     justify-content: center;
-    /* justify-content: space-around; */
-    /* border: solid 1px red; */
   }
 
   .page-button {

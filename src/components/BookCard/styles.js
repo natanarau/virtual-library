@@ -43,9 +43,6 @@ export const Container = styled.div`
 `;
 
 export const StarContainer = styled.div`
-  /* position: absolute;
-  right: 0;
-  top: 0; */
   display: flex;
   justify-content: flex-end;
 
