@@ -1,5 +1,5 @@
 import React from "react";
-import BookCard from "../../components/BookCard";
+import { BookCard } from "../../components/BookCard";
 import api from "../../services/api";
 import ReactPaginate from "react-paginate";
 

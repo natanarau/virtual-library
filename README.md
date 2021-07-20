@@ -1,6 +1,12 @@
+# Virtual Library
+
+### 🚀 Biblioteca virtual usando [Google Books APIs](https://developers.google.com/books/docs/v1/using)
+
+    🚧  Em desenvolvimento...  🚧
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).a
 
 ## Available Scripts
 
