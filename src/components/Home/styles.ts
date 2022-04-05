@@ -1,23 +1,27 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  background-color: #0D0D0D;
-  height: 100vh;
-  width: 100vw;
-  padding: 5%;
-
+    background-color: var(--dark);
+    height: 100vh;
+    padding: 5%;
+    display: flex;
+    align-items: center;
 `;
 
 export const HomeContent = styled.div`
   background-color: #582be7;
   border-radius: 20px;
   display: flex;
+  max-height: 500px;
+  height: 100%;
   justify-content: space-evenly;
   align-items: center;
+  padding: 20px;
 
  @media (max-width: 720px) { 
     padding: 20px; 
-    flex-direction: column;
+    flex-direction: column-reverse;
+  
   }
 `
 export const HomeImg = styled.img`
