@@ -1,16 +1,15 @@
 import { SetStateAction, useState } from "react";
-import search from "../../assets/imgs/search.png";
 import { useBookContext } from "../../hooks/useContextDataBook";
 import * as S from "./styles";
 
 export const Search = () => {
   const [setBusca, setBuscaState] = useState("");
-  const { setSearch, seCurrentPage } = useBookContext();
+  const { setSearch, setCurrentPage, pages, books } = useBookContext();
 
-  seCurrentPage(1);
+  setCurrentPage(1);
 
   const handleSubmit = () => {
-    seCurrentPage(1);
+    setCurrentPage(1);
     setSearch(setBusca);
   };
 
@@ -22,19 +21,22 @@ export const Search = () => {
 
   setSearch(setBusca);
 
+  console.log(pages, "pages");
+  console.log(books, "books");
+
   return (
     <S.SearchContainer>
-      <label></label>
       <S.Search>
         <S.SearchInput
           name="book"
-          placeholder="O que esta procurando?"
+          placeholder="Encontre o seu livro aqui"
           type="text"
           value={setBusca}
           onChange={handleChange}
         />
         <S.SearchButton onClick={handleSubmit} type="submit">
-          <img src={search} alt="search" />
+          {/* <img src={search} alt="search" /> */}
+          <p>Procurar Livro</p>
         </S.SearchButton>
       </S.Search>
     </S.SearchContainer>
