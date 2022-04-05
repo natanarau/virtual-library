@@ -10,7 +10,7 @@ import { DataBook } from "../services/api1";
 
 interface BookContextProps {
   setSearch: Dispatch<SetStateAction<string | undefined>>;
-  seCurrentPage: Dispatch<SetStateAction<number>>;
+  setCurrentPage: Dispatch<SetStateAction<number>>;
   pages: number;
   books: never[];
   setFavoriteBooks: Dispatch<SetStateAction<never[]>>;
@@ -24,12 +24,10 @@ export const BookContext = createContext({} as BookContextProps);
 
 export const BookContextProvider = ({ children }: BookContextProviderProps) => {
   const [search, setSearch] = useState<any>();
-  const [currentPage, seCurrentPage] = useState<any>();
+  const [currentPage, setCurrentPage] = useState<any>();
   const [pages, setPages] = useState(0);
   const [books, setBooks] = useState([]);
   const [favoriteBooks, setFavoriteBooks] = useState([]);
-
-  console.log(search, currentPage);
 
   useEffect(() => {
     if (search === undefined || search === "") {
@@ -50,7 +48,7 @@ export const BookContextProvider = ({ children }: BookContextProviderProps) => {
     <BookContext.Provider
       value={{
         setSearch,
-        seCurrentPage,
+        setCurrentPage,
         setFavoriteBooks,
         pages,
         books,
