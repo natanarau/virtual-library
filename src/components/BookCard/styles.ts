@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const BookCardContainer = styled.div`
   display: flex;
   padding: 2vh 2vw;
-  width: 30em;
+  max-width: 30em;
+  width: 100%;
   flex-direction: column;
 `;
 
@@ -15,6 +16,7 @@ export const BookCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #Fff;
 `
 export const BookCardInfo = styled.div`
   display: flex;
@@ -23,6 +25,7 @@ export const BookCardInfo = styled.div`
 export const BookCover = styled.img`
   width: 133;
   height: 196;
+  border-radius: 10px;
 `
 export const BookCardInfoDetails = styled.div`
   display: flex;
@@ -56,28 +59,36 @@ export const Bottons = styled.div`
   }
 `
 export const BottonSeeMore = styled.button`
-  border-style: none;
-  border-radius: 10px;
-  background-color: #0D0D0D;
+  border-style: solid ;
+  border-width: 1px;
+  border-color: #0D0D0D;
+  background-color: transparent;
   font-size: 13px;
+  border-radius: 10px;
   height: 2.25rem;  
-  color: #F2F2F2;  
   width: 100%;
   margin-right: 1px;
   @media (max-width: 720px) { 
    margin-bottom: 1px;
+  }
+  
+  &:hover {
+    filter: brightness(0.9);
   }
 `
 export const BottonFavorite = styled.button`
   border-style: solid ;
   border-width: 1px;
   border-color: #0D0D0D;
-  border-radius: 10px;
+  border-radius: 40px;
   font-size: 13px;
   height: 2.25rem;
   background-color: transparent;
-  width: 100%;
+  width: 10%;
   margin-left: 1px;
+  &:hover {
+    opacity: 0.8;
+  }
   @media (max-width: 720px) { 
    margin-top: 1px;
   }

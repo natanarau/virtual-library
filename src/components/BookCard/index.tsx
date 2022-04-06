@@ -58,7 +58,6 @@ export const BookCard: React.FC<bookCardProps> = ({
             Ver Mais <ArrowForwardIcon />
           </S.BottonSeeMore>
           <S.BottonFavorite onClick={handleFavorite}>
-            Adicionar aos Favoritos
             {isFavorite ? (
               <FavoriteIcon color="secondary" />
             ) : (

@@ -5,10 +5,11 @@ export const SearchContainer = styled.div`
 `;
 
 export const Search = styled.div`
-  display: flex;
+
   transition: filter 0.2s;
   display: flex;
   width: 100%;
+  justify-content: center;
 
   &:hover {
     filter: brightness(0.9);
