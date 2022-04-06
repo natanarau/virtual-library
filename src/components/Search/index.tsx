@@ -35,7 +35,6 @@ export const Search = () => {
           onChange={handleChange}
         />
         <S.SearchButton onClick={handleSubmit} type="submit">
-          {/* <img src={search} alt="search" /> */}
           <p>Procurar Livro</p>
         </S.SearchButton>
       </S.Search>
