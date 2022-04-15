@@ -1,4 +1,4 @@
-import bg from "../../assets/imgs/bg1.png";
+import bg from "../../assets/imgs/bg-home.svg";
 import * as S from "./styles";
 
 export const NotFound = () => {
