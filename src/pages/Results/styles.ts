@@ -28,7 +28,16 @@ export const ResultTitle = styled.div`
   @media (max-width: 720px) { 
     font-size: 20px;
   }
+  p{
+    text-decoration: none;
+    color: #F2F2F2;
+  }
 `;
+
+export const linkStyle = {
+  textDecoration: "none",
+};
+
 
 export const ResultMenu = styled.div`
   display: flex;
