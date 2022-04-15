@@ -1,10 +1,11 @@
 import { SetStateAction, useState } from "react";
+import { Link } from "react-router-dom";
 import { useBookContext } from "../../hooks/useContextDataBook";
 import * as S from "./styles";
 
 export const Search = () => {
   const [setBusca, setBuscaState] = useState("");
-  const { setSearch, setCurrentPage, pages, books } = useBookContext();
+  const { setSearch, setCurrentPage } = useBookContext();
 
   setCurrentPage(1);
 
@@ -21,9 +22,6 @@ export const Search = () => {
 
   setSearch(setBusca);
 
-  console.log(pages, "pages");
-  console.log(books, "books");
-
   return (
     <S.SearchContainer>
       <S.Search>
@@ -34,9 +32,12 @@ export const Search = () => {
           value={setBusca}
           onChange={handleChange}
         />
-        <S.SearchButton onClick={handleSubmit} type="submit">
-          <p>Procurar Livro</p>
-        </S.SearchButton>
+        <Link to="/results">
+          {" "}
+          <S.SearchButton onClick={handleSubmit} type="submit">
+            <p>Procurar Livro</p>
+          </S.SearchButton>
+        </Link>
       </S.Search>
     </S.SearchContainer>
   );
