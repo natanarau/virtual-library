@@ -22,7 +22,7 @@ export const BookCard: React.FC<bookCardProps> = ({
   publishedDate,
   infoLink,
   handleFavorite,
-  isFavorite = false,
+  isFavorite,
 }) => {
   return (
     <S.BookCardContainer>

@@ -8,13 +8,28 @@ import {
 } from "react";
 import { DataBook } from "../services/api1";
 
+interface Book {
+  id: number;
+  title: string;
+  description: string;
+  publishedDate: string;
+  infoLink: string;
+  bookCover: string;
+}
+
+interface books {
+  volumeInfo: Book;
+  id: string;
+}
+
 interface BookContextProps {
   setSearch: Dispatch<SetStateAction<string | undefined>>;
   setCurrentPage: Dispatch<SetStateAction<number>>;
   pages: number;
-  books: never[];
-  setFavoriteBooks: Dispatch<SetStateAction<never[]>>;
-  favoriteBooks: never[];
+  books: books[];
+  setFavoriteBooks: Dispatch<SetStateAction<books[]>>;
+  favoriteBooks: books[];
+  setBooks: Dispatch<SetStateAction<books[]>>;
 }
 
 interface BookContextProviderProps {
@@ -26,8 +41,8 @@ export const BookContextProvider = ({ children }: BookContextProviderProps) => {
   const [search, setSearch] = useState<any>();
   const [currentPage, setCurrentPage] = useState<any>();
   const [pages, setPages] = useState(0);
-  const [books, setBooks] = useState([]);
-  const [favoriteBooks, setFavoriteBooks] = useState([]);
+  const [books, setBooks] = useState<books[]>([]);
+  const [favoriteBooks, setFavoriteBooks] = useState<books[]>([]);
 
   useEffect(() => {
     if (search === undefined || search === "") {
@@ -50,6 +65,7 @@ export const BookContextProvider = ({ children }: BookContextProviderProps) => {
         setSearch,
         setCurrentPage,
         setFavoriteBooks,
+        setBooks,
         pages,
         books,
         favoriteBooks,
