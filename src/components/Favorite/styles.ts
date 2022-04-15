@@ -1,23 +1,22 @@
 import styled from "styled-components";
 
 export const FavoriteButton = styled.button`
-    border-radius: 10px;
-    padding: 5px 10px 10px 5px;
-    background-color: white;
-    border-style: none;
-    max-width: 150px;
-    width: 100%;
-    height: 2.25rem;
-    font-size: 11px;
+  border-radius: 10px;
+  background-color: white;
+  border-style: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+  font-size: 13px;
+  color: var(--blueDark);
 
   img {
-    width: 1.8rem;
+    width: 20px;
+    margin-right: 5px;
   }
-  @media (max-width: 500px) { 
+  @media (max-width: 500px) {
     font-size: 9px;
     img {
-      width: 1.5rem;
+      width: 15px;
     }
   }
 `;
-

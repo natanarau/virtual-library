@@ -7,7 +7,7 @@ export const Search = styled.div`
   display: flex;
   width: 100%;
   background-color: var(--baby);
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px;
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -29,6 +29,7 @@ export const SearchInput = styled.input`
 `;
 
 export const SearchButton = styled.button`
+  /* top | right | bottom | left */
   border-style: none;
   border-radius: 0 10px 10px 0;
   background-color: var(--blue);
