@@ -34,18 +34,18 @@ export const HomeImg = styled.img`
 `;
 
 export const HomeTitle = styled.h1`
-  color: var(--blue);
+  color: var(--blueMedium);
   margin-bottom: 20px;
 `;
 
 export const HomePhrase = styled.h2`
-  color: var(--grey);
+  color: var(--blueMedium);
   font-size: 1rem;
   font-weight: lighter;
 `;
 
 export const HomeAuthor = styled.h3`
-  color: var(--grey);
+  color: var(--blue);
   font-size: 0.7rem;
   font-weight: lighter;
   margin-bottom: 20px;

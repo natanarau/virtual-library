@@ -6,7 +6,12 @@ import {
   useEffect,
   useState,
 } from "react";
-import { DataBook } from "../services/api1";
+import { DataBook } from "../services/api";
+
+interface BookCover {
+  smallThumbnail: string;
+  thumbnail: string;
+}
 
 interface Book {
   id: number;
@@ -14,7 +19,7 @@ interface Book {
   description: string;
   publishedDate: string;
   infoLink: string;
-  bookCover: string;
+  imageLinks: BookCover;
 }
 
 interface books {

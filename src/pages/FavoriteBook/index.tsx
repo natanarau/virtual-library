@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { BookCard } from "../../components/BookCard";
+import { Header } from "../../components/Header";
 import { Search } from "../../components/Search";
 
 import { useBookContext } from "../../hooks/useContextDataBook";
@@ -16,48 +16,43 @@ export const FavoriteBook = () => {
       setFavoriteBooks(removeFavorite);
     }
   };
+
   return (
     <S.Container id="favorite-book">
-      <S.FavoriteBook>
-        <S.FavoriteBookHeader>
-          <S.FavoriteBookTitle>
-            <Link to="/" style={S.linkStyle}>
-              <p>Biblioteca Virtual</p>
-            </Link>
-          </S.FavoriteBookTitle>
-        </S.FavoriteBookHeader>
-      </S.FavoriteBook>
-      <S.Search>
-        <Search />
-
-        {favoriteBooks.length > 0 && (
-          <S.FavoriteBookContainer>
-            {favoriteBooks.map((book) => {
-              return (
-                <BookCard
-                  bookCover={book.volumeInfo.bookCover}
-                  title={book.volumeInfo.title}
-                  description={book.volumeInfo.description}
-                  publishedDate={book.volumeInfo.publishedDate}
-                  infoLink={book.volumeInfo.infoLink}
-                  handleFavorite={() => handleFavorite(book)}
-                  isFavorite={
-                    favoriteBooks.filter((elm) => {
-                      return elm.id === book.id;
-                    }).length > 0
-                  }
-                />
-              );
-            })}
-          </S.FavoriteBookContainer>
-        )}
-
-        {favoriteBooks.length === 0 && (
-          <S.FavoriteError>
-            <p>Você não favoritou nenhum livro</p>
-          </S.FavoriteError>
-        )}
-      </S.Search>
+      <Header />
+      <S.ContainerResult>
+        <S.Search>
+          <Search />
+          <S.FavoriteContainer>
+            {favoriteBooks.length > 0 && (
+              <S.FavoriteBookContainer>
+                {favoriteBooks.map((book) => {
+                  return (
+                    <BookCard
+                      bookCover={book.volumeInfo?.imageLinks?.thumbnail}
+                      title={book.volumeInfo.title}
+                      description={book.volumeInfo.description}
+                      publishedDate={book.volumeInfo.publishedDate}
+                      infoLink={book.volumeInfo.infoLink}
+                      handleFavorite={() => handleFavorite(book)}
+                      isFavorite={
+                        favoriteBooks.filter((elm) => {
+                          return elm.id === book.id;
+                        }).length > 0
+                      }
+                    />
+                  );
+                })}
+              </S.FavoriteBookContainer>
+            )}
+          </S.FavoriteContainer>
+          {favoriteBooks.length === 0 && (
+            <S.FavoriteError>
+              <p>Você não favoritou nenhum livro</p>
+            </S.FavoriteError>
+          )}
+        </S.Search>
+      </S.ContainerResult>
     </S.Container>
   );
 };

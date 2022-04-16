@@ -24,30 +24,37 @@ export const BookCard: React.FC<bookCardProps> = ({
   handleFavorite,
   isFavorite,
 }) => {
+  let year = publishedDate?.split("-")[0];
+  if (
+    publishedDate === "" ||
+    publishedDate === null ||
+    publishedDate === undefined
+  ) {
+    year = "";
+  }
+
   return (
     <S.BookCardContainer>
       <S.BookCard>
         <S.BookCardInfo>
+          <S.BookCover
+            src={bookCover ? bookCover : CoverNotFound}
+            alt={title}
+          />
           <S.BookCardInfoDetails>
+            <S.BookCardPublished>{year}</S.BookCardPublished>
             <S.BookCardTitle>
               {title &&
-                `${title.substring(0, 35)} ${title.length > 35 ? "..." : ""}`}
+                `${title.substring(0, 25)} ${title.length > 25 ? "..." : ""}`}
             </S.BookCardTitle>
-            <S.BookCardPublished>
-              Publicado em: {publishedDate}
-            </S.BookCardPublished>
+
             <S.BookCardDescription>
-              <span>Descrição:</span>
               {description &&
                 `${description.substring(0, 160)} ${
                   description.length > 160 ? "..." : ""
                 }`}
             </S.BookCardDescription>
           </S.BookCardInfoDetails>
-          <S.BookCover
-            src={bookCover ? bookCover : CoverNotFound}
-            alt={title}
-          />
         </S.BookCardInfo>
         <S.Bottons>
           <S.BottonSeeMore
@@ -61,7 +68,7 @@ export const BookCard: React.FC<bookCardProps> = ({
             {isFavorite ? (
               <FavoriteIcon color="secondary" />
             ) : (
-              <FavoriteBorderIcon />
+              <FavoriteBorderIcon style={{ color: "#6798A0" }} />
             )}
           </S.BottonFavorite>
         </S.Bottons>

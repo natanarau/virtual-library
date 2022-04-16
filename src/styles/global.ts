@@ -1,11 +1,16 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     :root{
-        --primary-color: #F2F2F2;
-        --purple: #582be7;
-        --light-purple: #ccc7e2;
-        --dark:  #0D0D0D
+        --green:#BED9D3;
+        --grey: #92BCC2;
+        --blue: #6798A0;
+        --blueMedium: #4F7A82;
+        --blueDark:#31626C;
+        --pastel: #FFE49B ;
+        --beach: #E3AD56 ;
+        --baby: #FCFDFD;
+        --cream: #1A1713;
     }
     * {
         margin: 0;
@@ -23,6 +28,10 @@ export const GlobalStyle = createGlobalStyle`
     body, input, button, textarea {
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
+        
+    }
+    body{
+        background-color: var(--blue);
     }
     h1, h2, h3, h4, h5, h6, strong{
         font-weight: 600;
@@ -36,4 +45,9 @@ export const GlobalStyle = createGlobalStyle`
         margin-top: 0;
         margin-bottom: 0;
     }
-`
+    textarea:focus, input:focus, select:focus, input:active, select:active {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+`;

@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import { BookCard } from "../../components/BookCard";
-import { Favorite } from "../../components/Favorite";
+import { Header } from "../../components/Header";
 import { Search } from "../../components/Search";
 import { useBookContext } from "../../hooks/useContextDataBook";
 import * as S from "./styles";
@@ -17,23 +16,10 @@ export const Result = () => {
       setFavoriteBooks(removeFavorite);
     }
   };
+
   return (
     <S.Container>
-      <S.Result>
-        <S.ContainerResult>
-          <S.ResultHeader>
-            <S.ResultTitle>
-              <Link to="/" style={S.linkStyle}>
-                <p>Biblioteca Virtual</p>
-              </Link>
-            </S.ResultTitle>
-            <S.ResultMenu>
-              <Favorite />
-            </S.ResultMenu>
-          </S.ResultHeader>
-        </S.ContainerResult>
-      </S.Result>
-
+      <Header />
       <S.ContainerResult>
         <S.Search>
           <Search />
@@ -41,7 +27,7 @@ export const Result = () => {
             {books.map((book) => (
               <BookCard
                 key={book.id}
-                bookCover={""}
+                bookCover={book.volumeInfo?.imageLinks?.thumbnail}
                 title={book.volumeInfo.title}
                 description={book.volumeInfo.description}
                 publishedDate={book.volumeInfo.publishedDate}

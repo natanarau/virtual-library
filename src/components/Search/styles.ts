@@ -24,12 +24,11 @@ export const SearchInput = styled.input`
     margin-bottom: 0;
   }
   ::placeholder {
-    color: var(--blueDark);
+    color: var(--blue);
   }
 `;
 
 export const SearchButton = styled.button`
-  /* top | right | bottom | left */
   border-style: none;
   border-radius: 0 10px 10px 0;
   background-color: var(--blue);
@@ -40,7 +39,7 @@ export const SearchButton = styled.button`
   p {
     margin-top: 0;
     margin-bottom: 0;
-    color: var(--primary-color);
+    color: var(--baby);
   }
   :hover {
     background-color: var(--blueDark);

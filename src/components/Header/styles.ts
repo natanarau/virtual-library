@@ -2,12 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div``;
 
-export const ContainerResult = styled.div`
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
-`;
-export const Result = styled.div`
+export const Header = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,14 +10,20 @@ export const Result = styled.div`
   width: 100%;
 `;
 
-export const ResultHeader = styled.div`
+export const ContainerHeader = styled.div`
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+`;
+
+export const HeaderHeader = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 20px;
 `;
 
-export const ResultTitle = styled.div`
+export const HeaderTitle = styled.div`
   color: var(--blueDark);
   font-size: 30px;
   @media (max-width: 720px) {
@@ -34,24 +35,11 @@ export const ResultTitle = styled.div`
   }
 `;
 
-export const ResultContainer = styled.div`
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  justify-content: space-between;
-  margin-top: 30px;
-`;
-
 export const linkStyle = {
   textDecoration: "none",
 };
 
-export const ResultMenu = styled.div`
+export const HeaderMenu = styled.div`
   display: flex;
   align-items: center;
-`;
-
-export const Search = styled.div`
-  width: 100%;
-  padding: 20px;
 `;
