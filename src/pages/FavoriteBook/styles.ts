@@ -12,7 +12,7 @@ export const FavoriteContainer = styled.div`
   display: inline-flex;
   flex-wrap: wrap;
   gap: 50px;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 30px;
 `;
 export const FavoriteBookContainer = styled.div`
