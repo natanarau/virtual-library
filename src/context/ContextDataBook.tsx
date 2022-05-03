@@ -35,6 +35,8 @@ interface BookContextProps {
   setFavoriteBooks: Dispatch<SetStateAction<books[]>>;
   favoriteBooks: books[];
   setBooks: Dispatch<SetStateAction<books[]>>;
+  loading: boolean;
+  currentPage: number;
 }
 
 interface BookContextProviderProps {
@@ -48,18 +50,24 @@ export const BookContextProvider = ({ children }: BookContextProviderProps) => {
   const [pages, setPages] = useState(0);
   const [books, setBooks] = useState<books[]>([]);
   const [favoriteBooks, setFavoriteBooks] = useState<books[]>([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (search === undefined || search === "") {
       return;
     } else {
+      setLoading(true);
       DataBook(search, currentPage)
         .then((res) => {
           setPages(Math.ceil(res.data.totalItems / 24));
           setBooks(res.data.items);
+          setLoading(false);
         })
         .catch(() => {
           return;
+        })
+        .finally(() => {
+          setLoading(false);
         });
     }
   }, [currentPage, search]);
@@ -74,6 +82,8 @@ export const BookContextProvider = ({ children }: BookContextProviderProps) => {
         pages,
         books,
         favoriteBooks,
+        loading,
+        currentPage,
       }}
     >
       {children}

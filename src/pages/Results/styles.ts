@@ -55,3 +55,10 @@ export const Search = styled.div`
   width: 100%;
   padding: 20px;
 `;
+
+export const Progress = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

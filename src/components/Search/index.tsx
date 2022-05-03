@@ -7,8 +7,6 @@ export const Search = () => {
   const [setBusca, setBuscaState] = useState("");
   const { setSearch, setCurrentPage } = useBookContext();
 
-  setCurrentPage(1);
-
   const handleSubmit = () => {
     setCurrentPage(1);
     setSearch(setBusca);
