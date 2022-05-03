@@ -29,10 +29,10 @@ export const Result = () => {
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
-    console.log(value, "value clicado");
+    window.scrollTo(0, 0);
   };
-  console.log(pages, "quantidade de paginas");
-  console.log(currentPage, "pagina atual");
+
+  const style = S.useStyles();
   return (
     <S.Container>
       <Header />
@@ -67,11 +67,14 @@ export const Result = () => {
                   Não encontramos nenhum livro com esse título, tente novamente!
                 </p>
               ))}
-            <Pagination
-              count={pages}
-              page={currentPage}
-              onChange={handleChange}
-            />
+            {pages > 1 && (
+              <Pagination
+                count={pages}
+                page={currentPage}
+                onChange={handleChange}
+                classes={{ root: style.root }}
+              />
+            )}
           </S.ResultContainer>
         </S.Search>
       </S.ContainerResult>

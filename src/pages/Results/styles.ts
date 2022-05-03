@@ -1,3 +1,4 @@
+import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
 
 export const Container = styled.div``;
@@ -62,3 +63,15 @@ export const Progress = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const useStyles = makeStyles(() => ({
+  root: {
+    "& .Mui-selected": {
+      backgroundColor: "var(--blueDark)",
+      color: "var(--baby)",
+    },
+    "& .MuiPaginationItem-page:hover": {
+      backgroundColor: "var(--blueDark)",
+    },
+  },
+}));
