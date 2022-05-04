@@ -4,7 +4,7 @@ export const BookCardContainer = styled.div`
   display: flex;
   max-width: 320px;
   width: 100%;
-  height: 320px;
+  height: 292px;
   flex-direction: column;
 `;
 

@@ -6,6 +6,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import { useLocalStorage } from "usehooks-ts";
 import { DataBook } from "../services/api";
 
 interface BookCover {
@@ -49,7 +50,10 @@ export const BookContextProvider = ({ children }: BookContextProviderProps) => {
   const [currentPage, setCurrentPage] = useState<any>();
   const [pages, setPages] = useState(0);
   const [books, setBooks] = useState<books[]>([]);
-  const [favoriteBooks, setFavoriteBooks] = useState<books[]>([]);
+  const [favoriteBooks, setFavoriteBooks] = useLocalStorage<books[]>(
+    "favoritos",
+    []
+  );
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

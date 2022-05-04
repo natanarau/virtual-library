@@ -49,8 +49,8 @@ export const BookCard: React.FC<bookCardProps> = ({
 
             <S.BookCardDescription>
               {description &&
-                `${description.substring(0, 150)} ${
-                  description.length > 150 ? "..." : ""
+                `${description.substring(0, 115)} ${
+                  description.length > 115 ? "..." : ""
                 }`}
             </S.BookCardDescription>
           </S.BookCardInfoDetails>
