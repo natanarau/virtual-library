@@ -35,6 +35,8 @@ export const GlobalStyle = createGlobalStyle`
     }
     h1, h2, h3, h4, h5, h6, strong{
         font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
     }
     button {
         cursor: pointer;
@@ -44,6 +46,8 @@ export const GlobalStyle = createGlobalStyle`
     p {
         margin-top: 0;
         margin-bottom: 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
     }
     textarea:focus, input:focus, select:focus, input:active, select:active {
     box-shadow: 0 0 0 0;

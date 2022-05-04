@@ -1,4 +1,3 @@
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import React from "react";
@@ -50,8 +49,8 @@ export const BookCard: React.FC<bookCardProps> = ({
 
             <S.BookCardDescription>
               {description &&
-                `${description.substring(0, 160)} ${
-                  description.length > 160 ? "..." : ""
+                `${description.substring(0, 150)} ${
+                  description.length > 150 ? "..." : ""
                 }`}
             </S.BookCardDescription>
           </S.BookCardInfoDetails>
@@ -62,7 +61,7 @@ export const BookCard: React.FC<bookCardProps> = ({
               window.open(infoLink, "_blank");
             }}
           >
-            Ver Mais <ArrowForwardIcon />
+            Ver Mais
           </S.BottonSeeMore>
           <S.BottonFavorite onClick={handleFavorite}>
             {isFavorite ? (

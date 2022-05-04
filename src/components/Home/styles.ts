@@ -36,19 +36,23 @@ export const HomeImg = styled.img`
 export const HomeTitle = styled.h1`
   color: var(--blueMedium);
   margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2rem;
 `;
 
 export const HomePhrase = styled.h2`
   color: var(--blueMedium);
   font-size: 1rem;
-  font-weight: lighter;
+  font-weight: 400;
+  opacity: 0.8;
 `;
 
 export const HomeAuthor = styled.h3`
   color: var(--blue);
   font-size: 0.7rem;
-  font-weight: lighter;
+  font-weight: 400;
   margin-bottom: 20px;
+  opacity: 0.7;
 `;
 
 export const HomeSearch = styled.div`

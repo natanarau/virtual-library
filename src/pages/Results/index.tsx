@@ -32,6 +32,8 @@ export const Result = () => {
     window.scrollTo(0, 0);
   };
 
+  console.log(books.length);
+
   const style = S.useStyles();
   return (
     <S.Container>
@@ -61,12 +63,13 @@ export const Result = () => {
                 }
               />
             ))}
-            {books?.length === 0 ||
-              (books?.length === undefined && (
+            {books.length === 0 && (
+              <S.Error>
                 <p>
                   Não encontramos nenhum livro com esse título, tente novamente!
                 </p>
-              ))}
+              </S.Error>
+            )}
             {pages > 1 && (
               <Pagination
                 count={pages}

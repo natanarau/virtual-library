@@ -64,6 +64,18 @@ export const Progress = styled.div`
   align-items: center;
 `;
 
+export const Error = styled.div`
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f2f2f2;
+  font-size: 30px;
+  @media (max-width: 720px) {
+    font-size: 20px;
+  }
+`;
+
 export const useStyles = makeStyles(() => ({
   root: {
     "& .Mui-selected": {

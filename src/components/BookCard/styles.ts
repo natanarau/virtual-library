@@ -4,6 +4,7 @@ export const BookCardContainer = styled.div`
   display: flex;
   max-width: 320px;
   width: 100%;
+  height: 320px;
   flex-direction: column;
 `;
 
@@ -41,14 +42,15 @@ export const BookCardTitle = styled.h1`
 `;
 export const BookCardPublished = styled.h1`
   font-size: 9px;
-  font-weight: lighter;
+  font-weight: 300;
   margin-bottom: 10px;
-  color: var(--blue);
+  color: var(--blueDark);
   line-height: 10px;
 `;
 export const BookCardDescription = styled.h6`
+  margin-top: 10px;
   font-size: 11px;
-  font-weight: lighter;
+  font-weight: 300;
   color: var(--blueDark);
   line-height: 17px;
 `;
@@ -62,7 +64,6 @@ export const Bottons = styled.div`
 `;
 export const BottonSeeMore = styled.button`
   border-style: none;
-
   background-color: var(--blue);
   font-size: 13px;
   border-radius: 10px;
@@ -88,6 +89,9 @@ export const BottonFavorite = styled.button`
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-left: 1px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   &:hover {
     opacity: 0.8;
   }
