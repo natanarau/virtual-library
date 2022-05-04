@@ -39,6 +39,10 @@ export const linkStyle = {
   textDecoration: "none",
 };
 
+export const Title = styled.p`
+  font-weight: 600;
+`;
+
 export const HeaderMenu = styled.div`
   display: flex;
   align-items: center;

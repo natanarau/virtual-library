@@ -10,7 +10,7 @@ export const Header = () => {
           <S.HeaderHeader>
             <S.HeaderTitle>
               <Link to="/" style={S.linkStyle}>
-                <p>Biblioteca Virtual</p>
+                <S.Title>Biblioteca Virtual</S.Title>
               </Link>
             </S.HeaderTitle>
             <S.HeaderMenu>

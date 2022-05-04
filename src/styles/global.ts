@@ -50,8 +50,11 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 400;
     }
     textarea:focus, input:focus, select:focus, input:active, select:active {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-} 
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    } 
+    a{
+        text-decoration: none;
+    }
 `;

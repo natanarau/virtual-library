@@ -8,7 +8,7 @@ export const Favorite = () => {
       <Link to="/favorite-book">
         <S.FavoriteButton type="submit">
           <img src={favorite} alt="Favorite" />
-          Ver favoritos
+          <p>Ver favoritos</p>
         </S.FavoriteButton>
       </Link>
     </>

@@ -65,7 +65,7 @@ export const Progress = styled.div`
 `;
 
 export const Error = styled.div`
-  padding: 5%;
+  padding: 5% 0;
   display: flex;
   flex-direction: column;
   align-items: center;

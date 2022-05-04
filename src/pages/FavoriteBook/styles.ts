@@ -28,7 +28,7 @@ export const Search = styled.div`
 `;
 
 export const FavoriteError = styled.div`
-  padding: 5%;
+  padding: 5% 0;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -32,7 +32,9 @@ export const Result = () => {
     window.scrollTo(0, 0);
   };
 
-  console.log(books.length);
+  console.log(books?.length);
+  console.log(books);
+  console.log(loading);
 
   const style = S.useStyles();
   return (
@@ -63,7 +65,7 @@ export const Result = () => {
                 }
               />
             ))}
-            {books.length === 0 && (
+            {(books?.length === 0 || books === undefined) && !loading && (
               <S.Error>
                 <p>
                   Não encontramos nenhum livro com esse título, tente novamente!

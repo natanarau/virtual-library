@@ -8,6 +8,9 @@ export const FavoriteButton = styled.button`
   padding: 10px;
   font-size: 13px;
   color: var(--blueDark);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 
   img {
     width: 20px;
