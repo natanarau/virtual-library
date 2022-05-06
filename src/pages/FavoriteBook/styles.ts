@@ -38,3 +38,34 @@ export const FavoriteError = styled.div`
     font-size: 20px;
   }
 `;
+
+export const Breadcrumbs = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 20px 20px 0 20px;
+  align-items: center;
+  align-content: center;
+  a,
+  p {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--baby);
+    svg {
+      margin-right: 5px;
+      color: var(--blueDark);
+      font-size: 20px;
+    }
+  }
+  a:hover {
+    color: var(--blueDark);
+    cursor: pointer;
+  }
+  #active {
+    font-weight: 600;
+    color: var(--blueDark);
+  }
+`;

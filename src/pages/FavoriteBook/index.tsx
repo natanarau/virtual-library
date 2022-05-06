@@ -1,3 +1,5 @@
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import { Link } from "react-router-dom";
 import { BookCard } from "../../components/BookCard";
 import { Header } from "../../components/Header";
 import { Search } from "../../components/Search";
@@ -21,6 +23,15 @@ export const FavoriteBook = () => {
     <S.Container id="favorite-book">
       <Header />
       <S.ContainerResult>
+        <S.Breadcrumbs>
+          <Link to="/">Home</Link>
+          <p>{">"}</p>
+          <p id="active">
+            <FavoriteIcon />
+            Favoritos
+          </p>
+        </S.Breadcrumbs>
+
         <S.Search>
           <Search />
           <S.FavoriteContainer>

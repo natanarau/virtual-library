@@ -1,5 +1,7 @@
 import CircularProgress from "@material-ui/core/CircularProgress";
+import SearchIcon from "@material-ui/icons/Search";
 import Pagination from "@material-ui/lab/Pagination";
+import { Link } from "react-router-dom";
 import { BookCard } from "../../components/BookCard";
 import { Header } from "../../components/Header";
 import { Search } from "../../components/Search";
@@ -32,15 +34,19 @@ export const Result = () => {
     window.scrollTo(0, 0);
   };
 
-  console.log(books?.length);
-  console.log(books);
-  console.log(loading);
-
   const style = S.useStyles();
   return (
     <S.Container>
       <Header />
       <S.ContainerResult>
+        <S.Breadcrumbs>
+          <Link to="/">Home</Link>
+          <p>{">"}</p>
+          <p id="active">
+            <SearchIcon />
+            Pesquisa
+          </p>
+        </S.Breadcrumbs>
         <S.Search>
           <Search />
           <S.ResultContainer>
