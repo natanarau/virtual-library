@@ -34,21 +34,14 @@ export const SearchButton = styled.button`
   background-color: var(--blue);
   font-size: 11px;
   height: 3.25rem;
-  padding: 18px;
+  padding: 5px;
   width: 100%;
   p {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
     color: var(--baby);
+    line-height: 1.2;
   }
   :hover {
     background-color: var(--blueDark);
-  }
-
-  @media (max-width: 720px) {
-    padding: 15px !important;
-  }
-  @media (max-width: 900px) {
-    padding: 5px;
   }
 `;
