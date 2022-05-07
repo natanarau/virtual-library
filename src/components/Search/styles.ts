@@ -6,7 +6,6 @@ export const Search = styled.div`
   transition: filter 0.2s;
   display: flex;
   width: 100%;
-  background-color: var(--baby);
   border-radius: 10px;
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
@@ -19,6 +18,8 @@ export const SearchInput = styled.input`
   font-size: 11px;
   height: 3.25rem;
   padding: 20px;
+  width: 100%;
+
   p {
     margin-top: 0;
     margin-bottom: 0;
