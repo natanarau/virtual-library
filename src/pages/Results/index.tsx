@@ -17,6 +17,7 @@ export const Result = () => {
     setCurrentPage,
     currentPage,
     pages,
+    search,
   } = useBookContext();
 
   const handleFavorite = (book: any) => {
@@ -33,7 +34,6 @@ export const Result = () => {
     setCurrentPage(value);
     window.scrollTo(0, 0);
   };
-
   const widthW = window.screen.width;
   const style = S.useStyles();
   return (
@@ -72,13 +72,18 @@ export const Result = () => {
                 }
               />
             ))}
-            {(books?.length === 0 || books === undefined) && !loading && (
-              <S.Error>
-                <p>
-                  Não encontramos nenhum livro com esse título, tente novamente!
-                </p>
-              </S.Error>
-            )}
+            {(books?.length === 0 || books === undefined) &&
+              !loading &&
+              (search === undefined ||
+                search === "" ||
+                books === undefined) && (
+                <S.Error>
+                  <p>
+                    Não encontramos nenhum livro com esse título, tente
+                    novamente!
+                  </p>
+                </S.Error>
+              )}
             {pages > 1 && (
               <Pagination
                 count={pages}

@@ -38,6 +38,7 @@ interface BookContextProps {
   setBooks: Dispatch<SetStateAction<books[]>>;
   loading: boolean;
   currentPage: number;
+  search: string;
 }
 
 interface BookContextProviderProps {
@@ -88,6 +89,7 @@ export const BookContextProvider = ({ children }: BookContextProviderProps) => {
         favoriteBooks,
         loading,
         currentPage,
+        search,
       }}
     >
       {children}
