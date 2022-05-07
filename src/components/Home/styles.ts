@@ -6,6 +6,7 @@ export const HomeContainer = styled.div`
   padding: 5%;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 export const HomeContent = styled.div`
