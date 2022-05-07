@@ -19,7 +19,7 @@ export const FavoriteBookContainer = styled.div`
   display: inline-flex;
   flex-wrap: wrap;
   gap: 50px;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 
 export const Search = styled.div`

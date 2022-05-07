@@ -34,6 +34,7 @@ export const Result = () => {
     window.scrollTo(0, 0);
   };
 
+  const widthW = window.screen.width;
   const style = S.useStyles();
   return (
     <S.Container>
@@ -84,6 +85,8 @@ export const Result = () => {
                 page={currentPage}
                 onChange={handleChange}
                 classes={{ root: style.root }}
+                siblingCount={0}
+                size={widthW < 300 ? "small" : "large"}
               />
             )}
           </S.ResultContainer>

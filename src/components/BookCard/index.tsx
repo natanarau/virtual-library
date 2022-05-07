@@ -32,6 +32,9 @@ export const BookCard: React.FC<bookCardProps> = ({
     year = "";
   }
 
+  const widthW = window.screen.width;
+  const textSize = widthW < 300 ? 59 : 105;
+
   return (
     <S.BookCardContainer>
       <S.BookCard>
@@ -49,8 +52,8 @@ export const BookCard: React.FC<bookCardProps> = ({
 
             <S.BookCardDescription>
               {description &&
-                `${description.substring(0, 115)} ${
-                  description.length > 115 ? "..." : ""
+                `${description.substring(0, textSize)} ${
+                  description.length > textSize ? "..." : ""
                 }`}
             </S.BookCardDescription>
           </S.BookCardInfoDetails>

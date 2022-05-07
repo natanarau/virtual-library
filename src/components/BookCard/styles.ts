@@ -4,7 +4,7 @@ export const BookCardContainer = styled.div`
   display: flex;
   max-width: 320px;
   width: 100%;
-  height: 292px;
+  min-height: 292px;
   flex-direction: column;
 `;
 
@@ -28,11 +28,14 @@ export const BookCover = styled.img`
   height: 196px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  @media (max-width: 720px) {
+    width: 103px;
+    height: 166px;
+  }
 `;
 export const BookCardInfoDetails = styled.div`
   display: flex;
   flex-direction: column;
-
   margin-left: 20px;
 `;
 export const BookCardTitle = styled.h1`
@@ -46,6 +49,9 @@ export const BookCardPublished = styled.h1`
   margin-bottom: 10px;
   color: var(--blueDark);
   line-height: 10px;
+  @media (max-width: 720px) {
+    margin-bottom: 5px;
+  }
 `;
 export const BookCardDescription = styled.h6`
   margin-top: 10px;
