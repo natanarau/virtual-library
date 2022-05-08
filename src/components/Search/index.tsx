@@ -1,10 +1,11 @@
-import { SetStateAction, useState } from "react";
+import { SetStateAction } from "react";
 import { Link } from "react-router-dom";
+import { useLocalStorage } from "usehooks-ts";
 import { useBookContext } from "../../hooks/useContextDataBook";
 import * as S from "./styles";
 
 export const Search = () => {
-  const [setBusca, setBuscaState] = useState("");
+  const [setBusca, setBuscaState] = useLocalStorage("search", "");
   const { setSearch, setCurrentPage } = useBookContext();
 
   const handleSubmit = () => {
@@ -29,6 +30,7 @@ export const Search = () => {
           type="text"
           value={setBusca}
           onChange={handleChange}
+          autoSave={setBusca}
         />
         <Link to="/results">
           {" "}
