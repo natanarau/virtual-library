@@ -10,8 +10,9 @@
     <br />
   </p>
 
-![](https://img.shields.io/badge/autor-SwannyAlves-pink)
-![](https://img.shields.io/badge/linguagem-TypeScript-blue)
+![](https://img.shields.io/badge/Autor-SwannyAlves-pink)
+![](https://img.shields.io/badge/Linguagem-TypeScript-blue)
+![](https://img.shields.io/badge/Status-Concluído-green)
 
 </p>
 
@@ -30,7 +31,7 @@
 <img src="src/assets/imgs/git.png" alt="screenshot">
  </p>
 
-O projeto **Biblioteca Virtual** é um sistema onde é possivel pesquisar livros e receber informações como: Descrição, Data da Publicação, Autor, onde comprar, dentre outros. Também é possível favoritar títulos.
+O projeto **Biblioteca Virtual** é um sistema para pesquisar livros utilizando a <a href="https://developers.google.com/books/" target="_blank">API do Google Books</a>. O projeto retorna informações como: Descrição, Data da Publicação, Autor, onde comprar, dentre outros. Também é possível favoritar títulos.
 
 ## 📝 Feito com <a name="feito"></a>
 
