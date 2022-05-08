@@ -91,7 +91,7 @@ export const Result = () => {
                 onChange={handleChange}
                 classes={{ root: style.root }}
                 siblingCount={0}
-                size={widthW < 300 ? "small" : "large"}
+                size={widthW < 390 ? "small" : "large"}
               />
             )}
           </S.ResultContainer>
