@@ -28,6 +28,11 @@ export const BookCover = styled.img`
   height: 196px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+  transition: filter 1s, -webkit-filter 0.5s;
+  -webkit-filter: blur(0);
+  filter: blur(0);
   @media (max-width: 720px) {
     width: 103px;
     height: 166px;

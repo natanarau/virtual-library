@@ -18,7 +18,7 @@ export const SearchInput = styled.input`
   font-size: 11px;
   height: 3.25rem;
   padding: 20px;
-  width: 100%;
+  width: 81%;
 
   p {
     margin-top: 0;
