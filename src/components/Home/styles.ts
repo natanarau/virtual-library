@@ -10,10 +10,12 @@ export const HomeContainer = styled.div`
 `;
 
 export const HomeContent = styled.div`
+  max-width: 1200px;
   background-color: var(--baby);
   border-radius: 20px;
   display: flex;
-  max-height: 550px;
+  min-height: 600px;
+  height: 100%;
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
@@ -26,7 +28,7 @@ export const HomeContent = styled.div`
 `;
 
 export const HomeImg = styled.img`
-  width: 60%;
+  width: 85%;
   margin-top: 20px;
   border-radius: 20px;
   -webkit-filter: blur(6px);
@@ -41,7 +43,12 @@ export const HomeImg = styled.img`
   }
   @media (max-width: 720px) {
     margin-left: 6%;
-    width: 45%;
+    width: 65%;
+    margin-top: 0;
+  }
+  @media (max-width: 42px) {
+    margin-left: 6%;
+    width: 55%;
     margin-top: 0;
   }
 `;

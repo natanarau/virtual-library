@@ -18,7 +18,7 @@ export const SearchInput = styled.input`
   font-size: 11px;
   height: 3.25rem;
   padding: 20px;
-  width: 81%;
+  width: 100%;
 
   p {
     margin-top: 0;
@@ -36,7 +36,6 @@ export const SearchButton = styled.button`
   font-size: 11px;
   height: 3.25rem;
   padding: 5px;
-  width: 100%;
   p {
     margin: 0;
     color: var(--baby);

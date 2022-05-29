@@ -75,6 +75,12 @@ export const BookContextProvider = ({ children }: BookContextProviderProps) => {
           setLoading(false);
         });
     }
+    return () => {
+      setSearch(undefined);
+      setCurrentPage(1);
+      setPages(0);
+      setBooks([]);
+    };
   }, [currentPage, search]);
 
   return (

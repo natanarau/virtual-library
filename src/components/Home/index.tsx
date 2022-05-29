@@ -1,4 +1,4 @@
-import bg from "../../assets/imgs/bg-home.svg";
+import bg from "../../assets/imgs/bg-home.jpg";
 import { useBookContext } from "../../hooks/useContextDataBook";
 import { Favorite } from "../Favorite";
 import { Search } from "../Search";
@@ -25,7 +25,7 @@ export const Home = () => {
           </S.HomeFavorite>
         </S.HomeSearch>
         <S.HomeImgCard>
-          <S.HomeImg force-cache src={bg} alt="bg" />
+          <S.HomeImg src={bg} alt="bg" />
         </S.HomeImgCard>
       </S.HomeContent>
     </S.HomeContainer>

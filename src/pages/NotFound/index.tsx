@@ -1,4 +1,4 @@
-import bg from "../../assets/imgs/bg-home.svg";
+import bg from "../../assets/imgs/bg-home.jpg";
 import { Search } from "../../components/Search";
 import * as S from "./styles";
 
