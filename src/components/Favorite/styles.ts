@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  width: 100%;
+  a {
+    width: 100%;
+  }
+`;
+
 export const FavoriteButton = styled.button`
   border-radius: 10px;
   background-color: white;
@@ -11,6 +18,7 @@ export const FavoriteButton = styled.button`
   display: flex;
   align-items: center;
   text-decoration: none;
+  width: 100%;
 
   img {
     width: 20px;
@@ -18,6 +26,8 @@ export const FavoriteButton = styled.button`
   }
   @media (max-width: 500px) {
     font-size: 9px;
+    width: 100%;
+
     img {
       width: 15px;
     }

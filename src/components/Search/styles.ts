@@ -36,7 +36,6 @@ export const SearchButton = styled.button`
   font-size: 11px;
   height: 3.25rem;
   padding: 5px;
-  width: 100%;
   p {
     margin: 0;
     color: var(--baby);

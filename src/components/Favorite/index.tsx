@@ -4,13 +4,13 @@ import * as S from "./styles";
 
 export const Favorite = () => {
   return (
-    <>
+    <S.Container>
       <Link to="/favorite-book">
         <S.FavoriteButton type="submit">
           <img src={favorite} alt="Favorite" />
           <p>Ver favoritos</p>
         </S.FavoriteButton>
       </Link>
-    </>
+    </S.Container>
   );
 };

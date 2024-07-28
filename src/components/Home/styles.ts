@@ -10,10 +10,11 @@ export const HomeContainer = styled.div`
 `;
 
 export const HomeContent = styled.div`
+  max-width: 1200px;
   background-color: var(--baby);
   border-radius: 20px;
   display: flex;
-  max-height: 550px;
+  min-height: 600px;
   height: 100%;
   justify-content: space-evenly;
   align-items: center;
@@ -22,17 +23,33 @@ export const HomeContent = styled.div`
   @media (max-width: 720px) {
     padding: 20px;
     max-height: 630px;
-    height: 100%;
     flex-direction: column-reverse;
   }
 `;
+
 export const HomeImg = styled.img`
-  width: 60%;
+  width: 85%;
   margin-top: 20px;
   border-radius: 20px;
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+  transition: filter 1s, -webkit-filter 0.5s;
+  -webkit-filter: blur(0);
+  filter: blur(0);
   @media (max-width: 1200px) {
     margin-left: 6%;
     width: 75%;
+    margin-top: 0;
+  }
+  @media (max-width: 720px) {
+    margin-left: 6%;
+    width: 65%;
+    margin-top: 0;
+  }
+  @media (max-width: 42px) {
+    margin-left: 6%;
+    width: 55%;
+    margin-top: 0;
   }
 `;
 
@@ -62,8 +79,11 @@ export const HomeSearch = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 150px;
+  height: 100%;
+  justify-content: center;
   @media (max-width: 720px) {
     padding: 0;
+    align-items: center;
   }
   @media (min-width: 721px) and (max-width: 1100px) {
     padding: 50px;
@@ -79,5 +99,21 @@ export const HomeImgCard = styled.div`
 
   @media (max-width: 720px) {
     align-items: center;
+    margin-bottom: 20px;
   }
+`;
+
+export const HomeFavorite = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+`;
+export const HomeSearchContainer = styled.div`
+  width: 100%;
 `;

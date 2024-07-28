@@ -1,8 +1,12 @@
-import bg from "../../assets/imgs/bg-home.svg";
+import bg from "../../assets/imgs/bg-home.jpg";
+import { useBookContext } from "../../hooks/useContextDataBook";
+import { Favorite } from "../Favorite";
 import { Search } from "../Search";
 import * as S from "./styles";
 
 export const Home = () => {
+  const { favoriteBooks } = useBookContext();
+
   return (
     <S.HomeContainer>
       <S.HomeContent>
@@ -13,7 +17,12 @@ export const Home = () => {
             viagens”.
           </S.HomePhrase>
           <S.HomeAuthor>- Francis de Croisset</S.HomeAuthor>
-          <Search />
+          <S.HomeSearchContainer>
+            <Search />
+          </S.HomeSearchContainer>
+          <S.HomeFavorite>
+            {favoriteBooks.length > 0 && <Favorite />}
+          </S.HomeFavorite>
         </S.HomeSearch>
         <S.HomeImgCard>
           <S.HomeImg src={bg} alt="bg" />
